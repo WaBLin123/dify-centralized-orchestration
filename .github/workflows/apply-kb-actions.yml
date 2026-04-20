@@ -1,0 +1,37 @@
+name: Apply KB Actions
+on:
+  repository_dispatch:
+    types: [dify_kb_update]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Apply kb_actions
+        env:
+          PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: |
+          echo "$PAYLOAD" > payload.json
+          jq -c '.kb_actions[]' payload.json | while read -r action; do
+            ACT=$(echo "$action" | jq -r '.action')
+            PATH_FILE=$(echo "$action" | jq -r '.path')
+            CONTENT=$(echo "$action" | jq -r '.content')
+            mkdir -p "$(dirname "$PATH_FILE")"
+            if [ "$ACT" = "create_file" ] || [ "$ACT" = "create_or_update" ]; then
+              printf "%s" "$CONTENT" > "$PATH_FILE"
+            fi
+          done
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          SUMMARY=$(jq -r '.kb_json.summary // .["kb-json"].summary // .summary // empty' payload.json | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g; s/^ //; s/ $//')
+          if [ -z "$SUMMARY" ]; then
+            SUMMARY="docs: apply kb actions from dify"
+          fi
+          git add .
+          git diff --cached --quiet || git commit -m "$SUMMARY"
+          git push
