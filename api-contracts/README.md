@@ -20,4 +20,4 @@
 
 ## 已有 API 契約
 
-- api-user-auth-v1.md
+- （目前無功能實例）
