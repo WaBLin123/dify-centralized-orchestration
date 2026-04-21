@@ -18,3 +18,7 @@
 - 先讀 `tech-stack.md` 取得全域技術棧基準。
 - 再讀 `design-<feature-name>.md` 了解功能層級設計與取捨。
 - 如需新建設計文件，先參考 `design-template.md`。
+
+## 已有設計文件
+
+- design-user-auth.md

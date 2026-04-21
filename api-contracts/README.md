@@ -17,3 +17,7 @@
 - 先讀模板：`api-contract-template.md`
 - 依模組與版本鎖定目標文件，例如 `api-xxx-v1.md`
 - 測試或串接前，先確認錯誤碼與版本策略章節是否完整。
+
+## 已有 API 契約
+
+- api-user-auth-v1.md
