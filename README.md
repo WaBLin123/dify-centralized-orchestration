@@ -38,6 +38,21 @@
 - `design/README.md`：設計文件與技術選型索引
 - `testing/README.md`：測試流程索引與命名規範
 
+## 常用 Prompt
+
+- `project-reorganization-prompt.md`：整個專案重整用 Prompt（可直接複製貼到 Agent 執行）
+
+## 重整後快速導覽
+
+目前已建立一條完整的 `user-auth` 文件鏈，可作為後續功能擴展範本：
+
+- Spec：`specs/spec-user-auth.md`
+- API Contract：`api-contracts/api-user-auth-v1.md`
+- Design：`design/design-user-auth.md`
+- Test Flow：`testing/test-flow-user-auth.md`
+
+新增功能時，請沿用同一個 `feature-name` 並補齊四份文件，避免上下游文件斷鏈。
+
 ## 各角色 Agent 的輸入／輸出檢查清單
 
 執行任務前，先確認 **輸入是否齊全**；產出後，在文件頂部「文件資訊」填寫 **狀態、版本、最後更新**，並在文末「相關文件」互相連結。

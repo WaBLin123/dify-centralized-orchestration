@@ -59,7 +59,8 @@
 ### 錯誤處理
 - 409 帳號已存在
 - 400 輸入格式錯誤
-- 401/403 Token 無效或過期
+- 401 Token 無效或過期
+- 404 Token 不存在或已使用
 - 429 限流封鎖
 - 500 伺服器錯誤
 
@@ -85,3 +86,5 @@
 ## 相關文件
 - ../specs/spec-user-auth.md
 - ../api-contracts/api-user-auth-v1.md
+- ../testing/test-flow-user-auth.md
+- ./tech-stack.md

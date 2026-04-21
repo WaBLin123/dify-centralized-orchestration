@@ -62,4 +62,6 @@
 - 假設 A-2：系統依賴 UUID 作為使用者主鍵。
 
 ## 相關文件
-- (待 RD 補齊 API 契約與設計文件)
+- ../api-contracts/api-user-auth-v1.md
+- ../design/design-user-auth.md
+- ../testing/test-flow-user-auth.md

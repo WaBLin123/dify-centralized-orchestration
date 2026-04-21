@@ -7,7 +7,7 @@
 - 作者：ai-workflow-helper[bot]
 
 ## API 概述
-本 API 契約定義使用者註冊與密碼重設相關介面，對應功能規格 `spec-user-auth.md`，用於部落格使用者帳號管理。
+本 API 契約定義使用者註冊與密碼重設相關介面，對應功能規格 `../specs/spec-user-auth.md`，用於部落格使用者帳號管理。
 
 ## 範圍定義
 ### In Scope
@@ -170,7 +170,9 @@
 - 監控失敗次數與封鎖事件
 
 ## 規格 / 測試對應
-- AC-1 至 AC-8
+- AC-1, AC-2, AC-3：`POST /api/register`
+- AC-4, AC-8：`POST /api/password/forgot`
+- AC-5, AC-6, AC-7：`POST /api/password/reset`
 
 ## 開放問題與阻塞項
 - Email 服務異常處理細節待補充

@@ -17,3 +17,7 @@
 - 先讀模板：`spec-template.md`
 - 找特定功能：`spec-<feature-name>.md`
 - 若有多份規格，優先比對文件中的版本、狀態與最後更新時間。
+
+## 已有規格文件
+
+- spec-user-auth.md

@@ -17,3 +17,7 @@
 - 先讀模板：`test-flow-template.md`
 - 再讀同名功能文件：`test-flow-<feature-name>.md`
 - 驗證時優先檢查是否已對應 Spec 驗收標準與 API 主要錯誤碼。
+
+## 已有測試流程
+
+- test-flow-user-auth.md
