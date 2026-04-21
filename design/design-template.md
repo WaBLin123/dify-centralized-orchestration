@@ -2,19 +2,36 @@
 
 ## 文件資訊
 
-- 文件名稱：
-- 對應功能：
-- 版本：
-- 狀態：Draft / Review / Approved
-- 作者：
-- 建立日期：
-- 最後更新：
+- **文件名稱**：
+- **對應功能**：
+- **版本**：1.0.0
+- **狀態**：Draft / Review / Approved
+- **最後更新**：
+- **作者**：
 
 ## 設計目標
 
 - 解決問題：
 - 設計原則：
 - 成功指標：
+
+## 範圍定義
+
+### In Scope
+
+- 項目 1：
+- 項目 2：
+
+### Out of Scope
+
+- 項目 A：
+- 項目 B：
+
+## 需求對應（Spec Traceability）
+
+- 對應 User Stories：US-1、US-2
+- 對應 Functional Requirements：FR-1、FR-2、FR-3
+- 對應 Acceptance Criteria：AC-1、AC-2
 
 ## 系統脈絡
 
@@ -32,9 +49,9 @@
 
 ### 模組拆分
 
-| 模組 | 責任 | 輸入 | 輸出 |
-| --- | --- | --- | --- |
-| module-a | 處理 A | payload-a | result-a |
+| 模組 | 責任 | 輸入 | 輸出 | 備註 |
+| --- | --- | --- | --- | --- |
+| module-a | 處理 A | payload-a | result-a | |
 
 ### 流程設計
 
@@ -93,6 +110,11 @@
 - 開關策略（Feature Flag）：
 - 回滾條件：
 - 回滾步驟：
+
+## 開放問題與阻塞項
+
+- 阻塞項 B-1：
+- 開放問題 Q-1：
 
 ## 相關文件
 
