@@ -28,7 +28,15 @@
 - 規格文件（Product / Functional Specs）
 - API 契約（API Contract）
 - 設計文件（Architecture / Technical Design）
+- 技術選型基準（Tech Stack Baseline）
 - 測試流程設計（Test Plan / Test Flow）
+
+## 各目錄索引（給 Agent 快速搜尋）
+
+- `specs/README.md`：規格文件索引與命名規範
+- `api-contracts/README.md`：API 契約索引與命名規範
+- `design/README.md`：設計文件與技術選型索引
+- `testing/README.md`：測試流程索引與命名規範
 
 ## 各角色 Agent 的輸入／輸出檢查清單
 
@@ -46,6 +54,7 @@
 - **輸出**：
   - `api-contracts/api-<module>-v<version>.md`（路徑、欄位、錯誤碼、版本策略）
   - `design/design-<feature-name>.md`（模組邊界、流程、資料模型、錯誤與發佈策略）
+  - `design/tech-stack.md`（跨功能技術棧基準；如需調整選型，先更新此文件）
 - **完成定義**：API 契約足以讓 QA 寫出請求／回應斷言；設計文件足以讓實作者知道模組責任與失敗處理。
 
 ### QA（測試流程 Agent）
@@ -74,6 +83,7 @@
 ├── specs/               # 功能規格、需求說明
 ├── api-contracts/       # API 契約、欄位與版本規範
 ├── design/              # 系統設計、流程圖、技術決策
+│   └── tech-stack.md    # 全專案技術選型基準
 └── testing/             # 測試策略、測試流程、案例設計
 ```
 
@@ -89,6 +99,7 @@
 - 規格文件：`spec-<feature-name>.md`
 - API 契約：`api-<service-or-module>-v<version>.md`
 - 設計文件：`design-<topic>.md`
+- 技術選型文件：`tech-stack.md`
 - 測試流程：`test-flow-<feature-name>.md`
 
 ## 協作流程（對應 Worker 分割）
